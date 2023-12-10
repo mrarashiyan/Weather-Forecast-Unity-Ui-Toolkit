@@ -37,6 +37,6 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Footer" style="flex-grow: 1; background-color: rgba(255, 0, 238, 0); height: 5%; bottom: 0; position: relative; max-height: 5%; align-items: center;">
-        <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Normal" />
+        <ui:VisualElement name="Mouse" class="MouseScroll" />
     </ui:VisualElement>
 </ui:UXML>

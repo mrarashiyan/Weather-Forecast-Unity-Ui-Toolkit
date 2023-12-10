@@ -12,3 +12,19 @@
 .CircleTimer Label {
     display: none;
 }
+
+.MouseScroll {
+    transition-duration: 0.7s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.MouseScroll {
+    flex-grow: 1;
+    background-image: url('project://database/Assets/_Project/Arts/Sprites/Icon/Icon_Scroll.png?fileID=2800000&guid=35e3cf0312f168b4ca8f52493f39b3df&type=3#Icon_Scroll');
+    -unity-background-scale-mode: scale-to-fit;
+    width: 50px;
+}
+
+.MouseScroll--Up {
+    translate: 0 -43px;
+}

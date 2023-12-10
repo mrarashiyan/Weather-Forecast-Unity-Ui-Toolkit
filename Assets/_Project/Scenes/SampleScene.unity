@@ -384,8 +384,8 @@ GameObject:
   m_Component:
   - component: {fileID: 819738172}
   - component: {fileID: 819738171}
-  - component: {fileID: 819738173}
   - component: {fileID: 819738174}
+  - component: {fileID: 819738173}
   m_Layer: 0
   m_Name: UI Component
   m_TagString: Untagged

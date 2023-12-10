@@ -11,6 +11,7 @@ namespace _Project.UI.HomePanel
     public class HomePanelInitializer : BaseUISection
     {
         private const string PLAY_SCROLL_CLASS = "CircleTimer";
+        private const string MOUSE_ICON = "MouseScroll";
 
 
         [SerializeField] private string m_NewsScrollviewKey = "NewsContainer";
@@ -22,6 +23,7 @@ namespace _Project.UI.HomePanel
         private List<SingleNewsModule> m_LoadedNewsModules = new List<SingleNewsModule>();
         private float m_CircleTimerValue = 0;
         private RadialProgress m_PlayerRadialProgressbar;
+        private VisualElement m_MouseScrollIcon;
 
         private void Update()
         {
@@ -37,7 +39,10 @@ namespace _Project.UI.HomePanel
             base.Initialize(root);
 
             m_PlayerRadialProgressbar = m_Root.Q<RadialProgress>(className: PLAY_SCROLL_CLASS);
+            m_MouseScrollIcon = m_Root.Q<VisualElement>(classes: MOUSE_ICON);
+
             LoadModules();
+            Invoke(nameof(AnimateMouseScroll), 1);
         }
 
         protected override void LoadModules()
@@ -47,7 +52,7 @@ namespace _Project.UI.HomePanel
             InitializeNews(m_Root);
             DoSlideNews();
         }
-        
+
 
         private void InitializeNews(VisualElement root)
         {
@@ -66,7 +71,6 @@ namespace _Project.UI.HomePanel
             }
         }
 
-        [ContextMenu("Next Slide")]
         private void DoSlideNews()
         {
             print("[HomePanelInitializer] DoSlideNews: Started");
@@ -87,9 +91,18 @@ namespace _Project.UI.HomePanel
             }
 
             m_CircleTimerValue = 0;
-            
+
             Invoke(nameof(DoSlideNews), m_NewsHoldDuration);
             print("[HomePanelInitializer] DoSlideNews: Finished");
+        }
+
+        private void AnimateMouseScroll()
+        {
+            m_MouseScrollIcon.RegisterCallback<TransitionEndEvent>(evnt =>
+                m_MouseScrollIcon.ToggleInClassList("MouseScroll--Up"));
+            
+            m_MouseScrollIcon.ToggleInClassList("MouseScroll--Up");
+
         }
     }
 }
