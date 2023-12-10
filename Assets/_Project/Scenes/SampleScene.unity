@@ -256,90 +256,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1265148305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &465339077
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 465339078}
-  - component: {fileID: 465339080}
-  - component: {fileID: 465339079}
-  m_Layer: 0
-  m_Name: '[EditorOnly] HomePanelInitializer(Clone)'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &465339078
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465339077}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.533258, y: -8.203492, z: -9.875663}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1608263031}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &465339079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465339077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18270583c5d46ea88e43cc73c58812c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &465339080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465339077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ed27c5cc9c74a45bcd3c3bbfccd87d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PrefabUiDocument: {fileID: 9197481963319205126, guid: 12b0a1b0227e8624c9f336d02148b9bd, type: 3}
-  m_NewsScrollviewKey: NewsContainer
-  m_NewsArray:
-  - thumbnail: {fileID: 2800000, guid: aee3a0bf32bbf1446b56ecfe4cabed68, type: 3}
-    title: '24/7 Stream: live'
-    desc: This is a HQ footage captured by ISS HDEV on board the International Space
-      Station
-    tags: '#Earth_From_Space #Nasa'
-    link: youtube.com
-  - thumbnail: {fileID: 2800000, guid: c454e7fd20cf309468488cca60bfac15, type: 3}
-    title: '24/7 Stream: live'
-    desc: This is a HQ footage captured by ISS HDEV on board the International Space
-      Station
-    tags: '#Earth_From_Space #Nasa'
-    link: youtube.com
-  - thumbnail: {fileID: 2800000, guid: c0d6f442b64d4144887d59f7a8ab0e37, type: 3}
-    title: '24/7 Stream: live'
-    desc: This is a HQ footage captured by ISS HDEV on board the International Space
-      Station
-    tags: '#Earth_From_Space #Nasa'
-    link: youtube.com
-  - thumbnail: {fileID: 2800000, guid: 52956dc64d2e54f44839dfd77be0a85b, type: 3}
-    title: '24/7 Stream: live'
-    desc: This is a HQ footage captured by ISS HDEV on board the International Space
-      Station
-    tags: '#Earth_From_Space #Nasa'
-    link: youtube.com
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +384,8 @@ GameObject:
   m_Component:
   - component: {fileID: 819738172}
   - component: {fileID: 819738171}
+  - component: {fileID: 819738173}
+  - component: {fileID: 819738174}
   m_Layer: 0
   m_Name: UI Component
   m_TagString: Untagged
@@ -504,9 +422,38 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1608263031}
+  - {fileID: 1893916527}
+  - {fileID: 1175160671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &819738173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819738170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fc375d82846ffaeb25d4831448b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartupUi: {fileID: 1175160670}
+  m_TargetUiDocument: {fileID: 819738171}
+--- !u!114 &819738174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819738170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fc375d82846ffaeb25d4831448b0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartupUi: {fileID: 1893916526}
+  m_TargetUiDocument: {fileID: 819738171}
 --- !u!1 &888393005
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +653,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1265148305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1175160669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175160671}
+  - component: {fileID: 1175160670}
+  m_Layer: 0
+  m_Name: HomePanel_Initializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1175160670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175160669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ed27c5cc9c74a45bcd3c3bbfccd87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NewsScrollviewKey: NewsContainer
+  m_NewsArray:
+  - thumbnail: {fileID: 2800000, guid: aee3a0bf32bbf1446b56ecfe4cabed68, type: 3}
+    title: '24/7 Stream: live'
+    desc: This is a HQ footage captured by ISS HDEV on board the International Space
+      Station
+    tags: '#Earth_From_Space #Nasa'
+    link: youtube.com
+  - thumbnail: {fileID: 2800000, guid: c454e7fd20cf309468488cca60bfac15, type: 3}
+    title: Where Can We Find Nature?
+    desc: 'Exploring the Beauty of Scenic Landscapes: Nature''s Masterpieces'
+    tags: '#Earth #Nature'
+    link: bbc.com
+  - thumbnail: {fileID: 2800000, guid: c0d6f442b64d4144887d59f7a8ab0e37, type: 3}
+    title: Top 10 Facts About Nature
+    desc: 'The Breathtaking Beauty of Scenic Landscapes: A Visual Delight'
+    tags: '#Facts #Did_You_Know'
+    link: yahoo.com
+  - thumbnail: {fileID: 2800000, guid: 52956dc64d2e54f44839dfd77be0a85b, type: 3}
+    title: Uncovering the Secrets of Nature
+    desc: By accepting our cookies, you'll get relevant content and social media
+      features
+    tags: '#Social_Media #Secret'
+    link: twitter.com
+  m_NewsHoldDuration: 8
+--- !u!4 &1175160671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175160669}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 819738172}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1265148302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,11 +828,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4643521465287934, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
   m_PrefabInstance: {fileID: 1265148302}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1608263031 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-  m_PrefabInstance: {fileID: 1023170417802955785}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782540654
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +858,50 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1265148305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893916525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893916527}
+  - component: {fileID: 1893916526}
+  m_Layer: 0
+  m_Name: Root_Initializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1893916526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893916525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4aaffbe9a908eb4f856c24e959bf860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1893916527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893916525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 819738172}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942465915
 GameObject:
@@ -879,74 +934,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1265148305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1023170417802955785
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 819738172}
-    m_Modifications:
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3252194845232581918, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_LoadInEditor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4730626791241235434, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_ParentUiDocument
-      value: 
-      objectReference: {fileID: 819738171}
-    - target: {fileID: 4786113344402382171, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      propertyPath: m_Name
-      value: HomePanelInjector
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 376513095504696576, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 465339078}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d3f6fafe6f886884da797689c1dda993, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

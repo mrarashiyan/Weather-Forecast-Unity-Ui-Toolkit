@@ -1,6 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="NewsModule" src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Components/Resources/VisualTrees/SingleNews/NewsModule.uxml?fileID=9197481963319205126&amp;guid=e70d77012905d68448efcb9afa449300&amp;type=3#NewsModule" />
     <Style src="project://database/Assets/_Project/Scripts/UIComponents/_RootPanel/Styles/GeneralStyle.uss?fileID=7433441132597879392&amp;guid=c782f742713779b408b6cb8c6f88c701&amp;type=3#GeneralStyle" />
     <Style src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Styles/HomePanel.uss?fileID=7433441132597879392&amp;guid=c76e6f052716549488989619eb6b6aba&amp;type=3#HomePanel" />
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Styles/NewsModule.uss?fileID=7433441132597879392&amp;guid=2b82b494ee3fc0b4bb6f5a67875b2821&amp;type=3#NewsModule" />
     <ui:VisualElement name="Page" style="flex-grow: 1; flex-direction: row;">
         <ui:VisualElement name="Left" class="Col-Full-Height" style="flex-grow: 1; flex-direction: row; padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; width: 30%; background-color: rgba(255, 0, 0, 0);">
             <ui:VisualElement style="flex-grow: 1; width: 50%; align-self: flex-start; height: 100%; padding-top: 0; justify-content: flex-start; align-items: flex-start; padding-right: 0; padding-bottom: 0; padding-left: 25px; max-width: 50px; margin-top: 41px;">
@@ -14,10 +16,10 @@
         </ui:VisualElement>
         <ui:VisualElement name="Mid" class="Col-Full-Height" style="flex-grow: 1; width: 63%; background-color: rgba(255, 241, 0, 0);" />
         <ui:VisualElement name="Right" class="Col-Full-Height" style="flex-grow: 1; width: 33%;">
-            <ui:VisualElement style="flex-grow: 1; max-height: 50%; height: 50%; justify-content: flex-end; padding-bottom: 22px; padding-left: 106px;">
+            <ui:VisualElement style="flex-grow: 1; max-height: 50%; height: 50%; justify-content: flex-end; padding-bottom: 22px; padding-left: 106px; min-height: 50%;">
                 <ui:Label tabindex="-1" text="Latest News:" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Normal" style="color: rgba(255, 255, 255, 0.54); font-size: 15px; margin-top: 2px; margin-bottom: 0; padding-left: 23px; margin-left: 39px;" />
             </ui:VisualElement>
-            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 255, 30, 0); flex-direction: row;">
+            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 255, 30, 0); flex-direction: row; height: 50%; max-height: 50%; min-height: 50%;">
                 <ui:VisualElement name="Player" style="flex-grow: 1; width: 12%; max-width: 12%;">
                     <RadialProgress class="CircleTimer" style="width: 50px; height: 50px; margin-top: 65px;">
                         <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/_Project/Arts/Sprites/Icon/Icon_Play.png?fileID=21300000&amp;guid=7d8cadf7f957fc7409ab1fb214576ac3&amp;type=3#Icon_Play&apos;); -unity-slice-left: 15; -unity-slice-top: 12; -unity-slice-right: 10; -unity-slice-bottom: 12; -unity-background-scale-mode: scale-to-fit;" />
@@ -27,7 +29,9 @@
                     <ui:VisualElement style="flex-grow: 1; height: 2px; max-height: 2px; background-color: rgba(255, 255, 255, 0.31); margin-top: 0; margin-left: 0; margin-right: 0;" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-grow: 1; width: auto; max-width: none; padding-top: 0; padding-right: 24px; padding-bottom: 0; padding-left: 24px; overflow: hidden; flex-wrap: nowrap;">
-                    <ui:ScrollView name="NewsContainer" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="height: 100%;" />
+                    <ui:ScrollView name="NewsContainer" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="height: 100%; overflow: hidden;">
+                        <ui:Instance template="NewsModule" name="NewsModule" />
+                    </ui:ScrollView>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

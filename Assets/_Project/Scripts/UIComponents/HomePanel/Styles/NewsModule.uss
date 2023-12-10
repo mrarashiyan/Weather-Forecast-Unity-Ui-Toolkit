@@ -3,6 +3,7 @@
     display: flex;
     position: absolute;
     top: 0;
+    transition-delay: 1s;
 }
 
 .SingleNews--Hide {
@@ -10,6 +11,7 @@
     opacity: 0;
     display: none;
     translate: 0 -214px;
+    transition-delay: 0s;
 }
 
 .Mamad {

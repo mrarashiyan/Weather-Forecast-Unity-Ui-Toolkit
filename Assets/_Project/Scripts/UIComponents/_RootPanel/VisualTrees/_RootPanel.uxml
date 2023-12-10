@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="HomeContainer" src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/VisualTrees/HomeContainer.uxml?fileID=9197481963319205126&amp;guid=12b0a1b0227e8624c9f336d02148b9bd&amp;type=3#HomeContainer" />
     <Style src="project://database/Assets/_Project/Scripts/UIComponents/_RootPanel/Styles/GeneralStyle.uss?fileID=7433441132597879392&amp;guid=c782f742713779b408b6cb8c6f88c701&amp;type=3#GeneralStyle" />
     <ui:VisualElement name="Header" style="flex-grow: 1;">
         <ui:VisualElement style="flex-grow: 1; width: 20%; max-width: 20%; flex-direction: row;">
@@ -15,7 +16,9 @@
             <ui:Button text="Item 3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button Text-Normal" />
             <ui:Button text="Item 4" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button Text-Normal" />
         </ui:VisualElement>
-        <ui:VisualElement name="Body" />
+        <ui:VisualElement name="Body">
+            <ui:Instance template="HomeContainer" name="HomeContainer" />
+        </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Footer">
         <ui:Label tabindex="-1" text="Copyright © 2024" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Normal" style="font-size: 21px; color: rgba(255, 255, 255, 0.56);" />
