@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/_RootPanel/Styles/GeneralStyle.uss?fileID=7433441132597879392&amp;guid=c782f742713779b408b6cb8c6f88c701&amp;type=3#GeneralStyle" />
+    <ui:VisualElement name="Header" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1; width: 20%; max-width: 20%; flex-direction: row;">
+            <ui:Button text="\uf0c9" parse-escape-sequences="true" display-tooltip-when-elided="true" enable-rich-text="false" name="BurgerBtn" class="icon--solid BurgerBtn" style="background-image: url(&apos;project://database/Assets/_Project/Arts/Sprites/Icon/Burger.png?fileID=21300000&amp;guid=b03c8b60ee10e944f8fa4ba5ee775938&amp;type=3#Burger&apos;); -unity-background-scale-mode: scale-to-fit; -unity-slice-scale: 1px; -unity-slice-left: 17; -unity-slice-top: 17; -unity-slice-right: 17; -unity-slice-bottom: 17;" />
+            <ui:Label tabindex="-1" text="Weather Forecast" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Header" style="font-size: 29px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Middle" style="flex-grow: 1; flex-direction: row; align-items: auto;">
+        <ui:VisualElement name="LeftMenu" class="LeftMenu LeftMenu--Closed">
+            <ui:Label tabindex="-1" text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Header" style="-unity-text-align: middle-center; font-size: 32px; -unity-font-style: normal;" />
+            <ui:VisualElement style="flex-grow: 1; height: 2px; max-height: 2px; max-width: none; width: 80%; background-color: rgb(255, 255, 255); align-items: auto;" />
+            <ui:Button text="Item 1" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button Text-Normal" />
+            <ui:Button text="Item 2" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button Text-Normal" />
+            <ui:Button text="Item 3" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button Text-Normal" />
+            <ui:Button text="Item 4" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Button Text-Normal" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Footer">
+        <ui:Label tabindex="-1" text="Copyright © 2024" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Normal" style="font-size: 21px; color: rgba(255, 255, 255, 0.56);" />
+    </ui:VisualElement>
+</ui:UXML>

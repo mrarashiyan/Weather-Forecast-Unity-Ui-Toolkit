@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &424012937665146576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6052680311282815324}
+  - component: {fileID: 2583874539007310705}
+  m_Layer: 0
+  m_Name: HomePanelInitializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6052680311282815324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424012937665146576}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.533258, y: -8.203492, z: -9.875663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2583874539007310705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424012937665146576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ed27c5cc9c74a45bcd3c3bbfccd87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PrefabUiDocument: {fileID: 9197481963319205126, guid: 12b0a1b0227e8624c9f336d02148b9bd, type: 3}
+  m_NewsScrollviewKey: NewsContainer
+  m_NewsArray:
+  - thumbnail: {fileID: 2800000, guid: aee3a0bf32bbf1446b56ecfe4cabed68, type: 3}
+    title: '24/7 Stream: live'
+    desc: This is a HQ footage captured by ISS HDEV on board the International Space
+      Station
+    tags: '#Earth_From_Space #Nasa'
+    link: youtube.com
+  - thumbnail: {fileID: 2800000, guid: c454e7fd20cf309468488cca60bfac15, type: 3}
+    title: '24/7 Stream: live'
+    desc: This is a HQ footage captured by ISS HDEV on board the International Space
+      Station
+    tags: '#Earth_From_Space #Nasa'
+    link: youtube.com
+  - thumbnail: {fileID: 2800000, guid: c0d6f442b64d4144887d59f7a8ab0e37, type: 3}
+    title: '24/7 Stream: live'
+    desc: This is a HQ footage captured by ISS HDEV on board the International Space
+      Station
+    tags: '#Earth_From_Space #Nasa'
+    link: youtube.com
+  - thumbnail: {fileID: 2800000, guid: 52956dc64d2e54f44839dfd77be0a85b, type: 3}
+    title: '24/7 Stream: live'
+    desc: This is a HQ footage captured by ISS HDEV on board the International Space
+      Station
+    tags: '#Earth_From_Space #Nasa'
+    link: youtube.com

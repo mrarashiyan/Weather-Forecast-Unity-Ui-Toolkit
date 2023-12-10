@@ -1,0 +1,16 @@
+.SingleNews {
+    transition-duration: 0.5s;
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+.SingleNews--Hide {
+    transition-duration: 0.5s;
+    opacity: 0;
+    display: none;
+    translate: 0 -214px;
+}
+
+.Mamad {
+}
