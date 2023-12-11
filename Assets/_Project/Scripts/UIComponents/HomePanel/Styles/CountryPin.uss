@@ -1,0 +1,56 @@
+.CircleCenter {
+    flex-grow: 1;
+    width: 60%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    max-height: 60%;
+    background-image: url('project://database/Assets/_Project/Arts/Sprites/Icon/Icon_Circle_Fill.png?fileID=21300000&guid=eca4b37d756760241925a8b5a7f693dc&type=3#Icon_Circle_Fill');
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+}
+
+.CountryPin {
+    flex-grow: 1;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    left: 898px;
+    top: 451px;
+}
+
+.CircleCenterWave {
+    flex-grow: 1;
+    position: absolute;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    background-image: url('project://database/Assets/_Project/Arts/Sprites/Icon/Icon_Circle_NoFill.png?fileID=2800000&guid=f9fe50c02f2e32440980c9b4d782e8bc&type=3#Icon_Circle_NoFill');
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-slice-left: 25;
+    -unity-slice-top: 25;
+    -unity-slice-right: 25;
+    -unity-slice-bottom: 25;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.CircleCenterWave--Large {
+    opacity: 0;
+    transition-duration: 2s 2s 2s 2s 0.5s;
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    transition-property: -unity-slice-left -unity-slice-top -unity-slice-right -unity-slice-bottom opacity;
+    transition-delay: 0s 0s 0s 0s 1.5s;
+}

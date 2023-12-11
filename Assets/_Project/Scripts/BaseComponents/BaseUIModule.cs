@@ -12,6 +12,7 @@ public class BaseUIModule : MonoBehaviour
     protected VisualTreeAsset m_VisualAsset;
     
     protected VisualElement m_PreInsertContainer;
+    protected VisualElement m_InsertedContainer;
     protected string m_ModuleId;
 
     public void Awake()
@@ -41,6 +42,7 @@ public class BaseUIModule : MonoBehaviour
     {
         m_PreInsertContainer.AddToClassList(m_ModuleId);
         m_Root.Add(m_PreInsertContainer);
+        m_InsertedContainer = m_Root.Q<VisualElement>(className: m_ModuleId);
         return m_PreInsertContainer;
     }
 
@@ -58,6 +60,8 @@ public class BaseUIModule : MonoBehaviour
     private void LoadVisualAsset()
     {
         m_VisualAsset = Resources.Load<VisualTreeAsset>(m_ModulePath);
+        if(m_VisualAsset == null)
+            print(string.Format("[{0}] LoadVisualAsset: Error, Visual Assets Not Found",gameObject.name));
     }
     
     protected T GetElement<T>(string Path) where T : VisualElement
@@ -72,8 +76,7 @@ public class BaseUIModule : MonoBehaviour
 
     public VisualElement GetInsertedContainer()
     {
-        var container = m_Root.Q<VisualElement>(className: m_ModuleId);
-        return container;
+        return m_InsertedContainer;
     }
 
     public string GetModuleId()

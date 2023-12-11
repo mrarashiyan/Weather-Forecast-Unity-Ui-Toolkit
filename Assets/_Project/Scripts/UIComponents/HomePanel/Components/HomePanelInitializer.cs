@@ -13,18 +13,28 @@ namespace _Project.UI.HomePanel
         private const string PLAY_SCROLL_CLASS = "CircleTimer";
         private const string MOUSE_ICON = "MouseScroll";
 
-
+        [Header("News Container")]
         [SerializeField] private string m_NewsScrollviewKey = "NewsContainer";
         [SerializeField] private SingleNews[] m_NewsArray;
         [SerializeField] private float m_NewsHoldDuration = 8;
 
+        [Header("Trackers Container")]
+        [SerializeField] private Transform m_CutPlane;
+        [SerializeField] private Camera m_MainCamera;
+        [SerializeField] private Transform[] m_InGameTrackers;
 
+        // elements in window        
+        private VisualElement m_MouseScrollIcon;
+        private RadialProgress m_PlayerRadialProgressbar;
+
+        // News variables
         private int m_CurrentLoadedNewsIndex = 0;
         private List<SingleNewsModule> m_LoadedNewsModules = new List<SingleNewsModule>();
         private float m_CircleTimerValue = 0;
-        private RadialProgress m_PlayerRadialProgressbar;
-        private VisualElement m_MouseScrollIcon;
 
+        // Trackers Variables
+        private List<CountryPinModule> m_LoadedCountryPinModules = new List<CountryPinModule>();
+        
         private void Update()
         {
             if (m_PlayerRadialProgressbar != null)
@@ -51,8 +61,12 @@ namespace _Project.UI.HomePanel
 
             InitializeNews(m_Root);
             DoSlideNews();
+            
+            InitializeCountryPins(m_Root);
         }
 
+
+        #region News Module
 
         private void InitializeNews(VisualElement root)
         {
@@ -73,7 +87,6 @@ namespace _Project.UI.HomePanel
 
         private void DoSlideNews()
         {
-            print("[HomePanelInitializer] DoSlideNews: Started");
             foreach (var singleNews in m_LoadedNewsModules)
             {
                 singleNews.GetInsertedContainer().AddToClassList("SingleNews--Hide");
@@ -93,9 +106,28 @@ namespace _Project.UI.HomePanel
             m_CircleTimerValue = 0;
 
             Invoke(nameof(DoSlideNews), m_NewsHoldDuration);
-            print("[HomePanelInitializer] DoSlideNews: Finished");
         }
 
+        #endregion
+
+        #region CountryPins Module
+
+        private void InitializeCountryPins(VisualElement root)
+        {
+            foreach (var inGameTracker in m_InGameTrackers)
+            {
+                var trackerModule = AddModule<CountryPinModule>();
+                trackerModule.SetRoot(root);
+                trackerModule.SetTransforms(inGameTracker,m_MainCamera,m_CutPlane);
+                trackerModule.LoadModule();
+                trackerModule.InsertVisualElement();
+                m_LoadedCountryPinModules.Add(trackerModule);
+            }
+        }
+
+        #endregion
+        
+        
         private void AnimateMouseScroll()
         {
             m_MouseScrollIcon.RegisterCallback<TransitionEndEvent>(evnt =>

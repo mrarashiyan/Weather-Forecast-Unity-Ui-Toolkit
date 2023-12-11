@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Styles/CountryPin.uss?fileID=7433441132597879392&amp;guid=c73534e099b30954d957dff4860f7b9c&amp;type=3#CountryPin" />
+    <ui:VisualElement name="CountryPin" class="CountryPin" style="background-color: rgba(255, 0, 0, 0); left: 0; top: 0;">
+        <ui:VisualElement name="Center" class="CircleCenter" style="-unity-background-image-tint-color: rgba(255, 255, 255, 0.53); -unity-background-scale-mode: scale-and-crop; width: 30%; height: 30%; max-width: 30%; max-height: 30%;" />
+        <ui:VisualElement name="Wave" class="CircleCenterWave" />
+    </ui:VisualElement>
+</ui:UXML>

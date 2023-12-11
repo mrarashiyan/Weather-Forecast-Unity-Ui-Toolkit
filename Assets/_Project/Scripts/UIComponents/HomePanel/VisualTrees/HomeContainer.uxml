@@ -3,6 +3,7 @@
     <Style src="project://database/Assets/_Project/Scripts/UIComponents/_RootPanel/Styles/GeneralStyle.uss?fileID=7433441132597879392&amp;guid=c782f742713779b408b6cb8c6f88c701&amp;type=3#GeneralStyle" />
     <Style src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Styles/HomePanel.uss?fileID=7433441132597879392&amp;guid=c76e6f052716549488989619eb6b6aba&amp;type=3#HomePanel" />
     <Style src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Styles/NewsModule.uss?fileID=7433441132597879392&amp;guid=2b82b494ee3fc0b4bb6f5a67875b2821&amp;type=3#NewsModule" />
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/HomePanel/Styles/CountryPin.uss?fileID=7433441132597879392&amp;guid=c73534e099b30954d957dff4860f7b9c&amp;type=3#CountryPin" />
     <ui:VisualElement name="Page" style="flex-grow: 1; flex-direction: row;">
         <ui:VisualElement name="Left" class="Col-Full-Height" style="flex-grow: 1; flex-direction: row; padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; width: 30%; background-color: rgba(255, 0, 0, 0);">
             <ui:VisualElement style="flex-grow: 1; width: 50%; align-self: flex-start; height: 100%; padding-top: 0; justify-content: flex-start; align-items: flex-start; padding-right: 0; padding-bottom: 0; padding-left: 25px; max-width: 50px; margin-top: 41px;">
