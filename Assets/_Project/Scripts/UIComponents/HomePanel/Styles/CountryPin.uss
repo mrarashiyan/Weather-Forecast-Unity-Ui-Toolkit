@@ -22,6 +22,8 @@
     background-color: rgb(255, 0, 0);
     left: 898px;
     top: 451px;
+    transition-duration: 0.5s;
+    transition-property: opacity;
 }
 
 .CircleCenterWave {
@@ -53,4 +55,17 @@
     -unity-slice-bottom: 0;
     transition-property: -unity-slice-left -unity-slice-top -unity-slice-right -unity-slice-bottom opacity;
     transition-delay: 0s 0s 0s 0s 1.5s;
+}
+
+.CountryPin--Hide {
+    flex-grow: 1;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    left: 898px;
+    top: 451px;
+    transition-duration: 0.5s;
+    opacity: 0;
+    transition-property: opacity;
 }

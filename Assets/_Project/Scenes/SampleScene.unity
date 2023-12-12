@@ -297,7 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382231048}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Earth Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1118,21 +1118,21 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023210844}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 8.927, y: -0.62, z: -0.55}
+  m_LocalRotation: {x: -0.014678913, y: -0.014678914, z: 0.7069544, w: 0.7069544}
+  m_LocalPosition: {x: 8.67, y: -0.62, z: -0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -2.379, z: 90}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 382231048}
   - {fileID: 57771499}
+  - {fileID: 382231048}
   - {fileID: 7239375}
   - {fileID: 819738172}
   - {fileID: 2023210847}

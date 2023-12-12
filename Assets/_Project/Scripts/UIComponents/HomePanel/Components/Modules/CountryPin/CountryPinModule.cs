@@ -47,12 +47,12 @@ namespace _Project.UI.HomePanel.Modules
             {
                 if (m_TrackingTransform.position.x < m_CutPlane.position.x)
                 {
-                    m_PreInsertContainer.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
+                    m_InsertedContainer.RemoveFromClassList("CountryPin--Hide");
                     AlignWithTracker();
                 }
                 else
                 {
-                    m_PreInsertContainer.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
+                    m_InsertedContainer.AddToClassList("CountryPin--Hide");
                 }
             }
         }
