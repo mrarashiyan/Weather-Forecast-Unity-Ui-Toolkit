@@ -21,10 +21,12 @@ namespace _Project.UI.HomePanel
         {
             base.Initialize(root);
 
+            // initializing required elements
             m_BurgerBtn = root.Q<Button>(className: BURGER_BUTTON);
             m_LeftMenu = root.Q<VisualElement>(className:LEFT_MENU);
             m_ScrollView = m_Root.Q<ScrollView>(BODY_SCROLLBAR);
             
+            // set click event of top left menu button
             m_BurgerBtn.clicked += ToggleLeftMenu;
         }
 
@@ -44,6 +46,11 @@ namespace _Project.UI.HomePanel
                 m_LeftMenu.AddToClassList("LeftMenu--Closed");
         }
 
+        /// <summary>
+        /// Change ScrollView of the Root panel to required Visual Elements.
+        /// Here we use this function to move between panels
+        /// </summary>
+        /// <param name="target"></param>
         public void ScrollTo(VisualElement target)
         {
             m_ScrollView.ScrollTo(target);

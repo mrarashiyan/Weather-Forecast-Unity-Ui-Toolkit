@@ -556,7 +556,6 @@ MonoBehaviour:
   m_SectionUxmlPath: BodyScroll PredictionPanel
   m_NextPanel: {fileID: 1175160670}
   m_RootInitializer: {fileID: 1893916526}
-  m_WeatherContainerKey: Left
   m_WeatherData:
   - icon: {fileID: 21300000, guid: c0e965f70271c0147b46ab1a60ced923, type: 3}
     cityName: Izmir
@@ -1038,7 +1037,7 @@ MonoBehaviour:
       features
     tags: '#Social_Media #Secret'
     link: twitter.com
-  m_NewsHoldDuration: 8
+  m_NewsHoldDuration: 5
   m_CutPlane: {fileID: 2023210847}
   m_MainCamera: {fileID: 963194227}
   m_InGameTrackers:

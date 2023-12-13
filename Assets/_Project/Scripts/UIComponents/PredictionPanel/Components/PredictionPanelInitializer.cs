@@ -25,7 +25,7 @@ namespace _Project.UI.PredictionPanel
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxis("Mouse ScrollWheel") > 0)
             {
                 ExitSection();
                 m_NextPanel.EnterSection();
