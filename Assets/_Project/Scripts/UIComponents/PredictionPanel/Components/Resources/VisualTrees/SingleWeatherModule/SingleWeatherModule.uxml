@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/_RootPanel/Styles/GeneralStyle.uss?fileID=7433441132597879392&amp;guid=c782f742713779b408b6cb8c6f88c701&amp;type=3#GeneralStyle" />
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/PredictionPanel/Styles/SinglePrediction.uss?fileID=7433441132597879392&amp;guid=21a7726be5f9d65469bc81183f59208c&amp;type=3#SinglePrediction" />
+    <ui:VisualElement name="WeatherModule" class="SingleWeatherModule" style="flex-grow: 1; align-items: center; flex-wrap: nowrap;">
+        <ui:VisualElement name="WeatherIcon" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/_Project/Arts/Sprites/Icon/Icon_Weather_Clear.png?fileID=2800000&amp;guid=c0e965f70271c0147b46ab1a60ced923&amp;type=3#Icon_Weather_Clear&apos;); width: 150px; height: 150px; align-items: center; align-self: center; flex-wrap: wrap; max-height: 150px; max-width: 150px; display: flex;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; width: 100%; max-height: 40px; height: 40px; justify-content: center; max-width: 100%; align-self: stretch;">
+            <ui:Label tabindex="-1" text="27" parse-escape-sequences="true" display-tooltip-when-elided="true" name="WeatherTemp" class="Text-Normal" style="color: rgb(255, 255, 255); font-size: 37px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; max-height: 100%; min-height: 100%;" />
+            <ui:Label tabindex="0" text="°C" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Text-Header" style="color: rgb(255, 255, 255); font-size: 20px; -unity-text-align: upper-left; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 100%; max-height: 100%;" />
+        </ui:VisualElement>
+        <ui:Label tabindex="-1" text="Izmir" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CityName" class="Text-Header" style="color: rgb(255, 255, 255); font-size: 55px; justify-content: flex-start; margin-top: 36px;" />
+    </ui:VisualElement>
+</ui:UXML>

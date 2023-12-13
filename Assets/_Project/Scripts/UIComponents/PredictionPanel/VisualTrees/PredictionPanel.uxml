@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="SingleWeatherModule" src="project://database/Assets/_Project/Scripts/UIComponents/PredictionPanel/VisualTrees/SingleWeatherModule.uxml?fileID=9197481963319205126&amp;guid=d21c08c44f9e29d4baa622d3e3e16415&amp;type=3#SingleWeatherModule" />
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/_RootPanel/Styles/GeneralStyle.uss?fileID=7433441132597879392&amp;guid=c782f742713779b408b6cb8c6f88c701&amp;type=3#GeneralStyle" />
+    <Style src="project://database/Assets/_Project/Scripts/UIComponents/PredictionPanel/Styles/SinglePrediction.uss?fileID=7433441132597879392&amp;guid=21a7726be5f9d65469bc81183f59208c&amp;type=3#SinglePrediction" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; padding-top: 0;">
+        <ui:VisualElement name="Left" style="flex-grow: 1; width: 13%; flex-direction: row; padding-top: 50px; padding-right: 50px; padding-bottom: 50px; padding-left: 50px; flex-wrap: wrap; justify-content: center; align-items: stretch;">
+            <ui:Instance template="SingleWeatherModule" name="SingleWeatherModule" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Right" style="flex-grow: 1; background-color: rgba(90, 255, 121, 0);" />
+    </ui:VisualElement>
+</ui:UXML>

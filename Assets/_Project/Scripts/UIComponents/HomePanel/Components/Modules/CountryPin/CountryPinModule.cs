@@ -30,14 +30,7 @@ namespace _Project.UI.HomePanel.Modules
             SetModulePath(MODULE_PATH);
             base.LoadModule();
 
-            m_PreInsertContainer = m_VisualAsset.Instantiate().ElementAt(0);
-            
-            foreach (var styleSheet in m_VisualAsset.stylesheets)
-            {
-                m_PreInsertContainer.styleSheets.Add(styleSheet);
-            }
-            
-            m_WaveElement = m_PreInsertContainer.Q<VisualElement>(className: WAVE_ELEMENT);
+            m_WaveElement = GetPreInsertContainer().Q<VisualElement>(className: WAVE_ELEMENT);
             Invoke(nameof(AnimateWave),0.5f);
         }
 
@@ -47,12 +40,12 @@ namespace _Project.UI.HomePanel.Modules
             {
                 if (m_TrackingTransform.position.x < m_CutPlane.position.x)
                 {
-                    m_InsertedContainer.RemoveFromClassList("CountryPin--Hide");
+                    GetInsertedContainer().RemoveFromClassList("CountryPin--Hide");
                     AlignWithTracker();
                 }
                 else
                 {
-                    m_InsertedContainer.AddToClassList("CountryPin--Hide");
+                    GetInsertedContainer().AddToClassList("CountryPin--Hide");
                 }
             }
         }

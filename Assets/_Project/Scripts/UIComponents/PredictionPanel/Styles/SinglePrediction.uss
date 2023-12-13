@@ -1,0 +1,22 @@
+.SingleWeatherModule {
+    max-width: 270px;
+    max-height: 400px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-left: 0;
+    width: 260px;
+    height: 400px;
+    overflow: hidden;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 31px;
+    border-bottom-right-radius: 31px;
+    border-bottom-left-radius: 31px;
+    background-color: rgba(0, 0, 0, 0.62);
+    align-items: center;
+    justify-content: center;
+}

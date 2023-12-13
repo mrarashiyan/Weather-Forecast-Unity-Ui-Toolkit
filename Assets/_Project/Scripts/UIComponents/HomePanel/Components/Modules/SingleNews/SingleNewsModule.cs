@@ -30,12 +30,12 @@ namespace _Project.UI.HomePanel.Modules
             
             base.LoadModule();
 
-            m_PreInsertContainer = m_VisualAsset.Instantiate().Q<VisualElement>("SingleNews");
-            m_PreInsertContainer.Q<VisualElement>(THUMBNAIL_IMAGE).style.backgroundImage = new StyleBackground(m_CurrentSingleNews.thumbnail);
-            m_PreInsertContainer.Q<Label>(TITLE_LABEL).text = m_CurrentSingleNews.title;
-            m_PreInsertContainer.Q<Label>(DESC_LABEL).text = m_CurrentSingleNews.desc;
-            m_PreInsertContainer.Q<Label>(TAGS_LABEL).text = m_CurrentSingleNews.tags;
-            m_PreInsertContainer.Q<Label>(LINK_LABEL).text = m_CurrentSingleNews.link;
+            //m_PreInsertContainer = m_VisualAsset.Instantiate().Q<VisualElement>("SingleNews");
+            GetPreInsertContainer().Q<VisualElement>(THUMBNAIL_IMAGE).style.backgroundImage = new StyleBackground(m_CurrentSingleNews.thumbnail);
+            GetPreInsertContainer().Q<Label>(TITLE_LABEL).text = m_CurrentSingleNews.title;
+            GetPreInsertContainer().Q<Label>(DESC_LABEL).text = m_CurrentSingleNews.desc;
+            GetPreInsertContainer().Q<Label>(TAGS_LABEL).text = m_CurrentSingleNews.tags;
+            GetPreInsertContainer().Q<Label>(LINK_LABEL).text = m_CurrentSingleNews.link;
         }
 
     }

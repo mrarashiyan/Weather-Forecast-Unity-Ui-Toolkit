@@ -42,7 +42,7 @@ Button:hover {
     width: 20%;
     max-width: 20%;
     transition-duration: 0.5s;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(4, 0, 26, 0.75);
     height: 100%;
     align-self: auto;
     align-items: center;
@@ -131,4 +131,9 @@ Button:hover {
 .radial-progress__label {
     -unity-text-align: middle-left;
     color: var(--percentage-color);
+}
+
+#BodyScroll #unity-content-container {
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-cubic;
 }

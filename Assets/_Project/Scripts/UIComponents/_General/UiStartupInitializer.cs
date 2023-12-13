@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,9 +10,11 @@ namespace _Project.Scripts.UIComponents._General
         [SerializeField] private BaseUISection m_StartupUi;
         [SerializeField] private UIDocument m_TargetUiDocument;
 
-        private void Start()
+        IEnumerator Start()
         {
             m_StartupUi.Initialize(m_TargetUiDocument.rootVisualElement);
+            yield return new WaitForEndOfFrame();
+            m_StartupUi.EnterSection();
         }
     }
 }

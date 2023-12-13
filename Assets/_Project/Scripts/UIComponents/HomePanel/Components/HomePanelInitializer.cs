@@ -23,6 +23,10 @@ namespace _Project.UI.HomePanel
         [SerializeField] private Camera m_MainCamera;
         [SerializeField] private Transform[] m_InGameTrackers;
 
+        [Header("Transition to next Container")]
+        [SerializeField] private RootInitializer m_RootInitializer;
+        [SerializeField] private BaseUISection m_NextPanel;
+
         // elements in window        
         private VisualElement m_MouseScrollIcon;
         private RadialProgress m_PlayerRadialProgressbar;
@@ -37,19 +41,36 @@ namespace _Project.UI.HomePanel
         
         private void Update()
         {
-            if (m_PlayerRadialProgressbar != null)
+            if (GetSectionActivationStatus())
             {
-                m_CircleTimerValue += Time.deltaTime * m_NewsHoldDuration * 2;
-                m_PlayerRadialProgressbar.progress = m_CircleTimerValue;
+                if (m_PlayerRadialProgressbar != null)
+                {
+                    m_CircleTimerValue += Time.deltaTime * m_NewsHoldDuration * 2;
+                    m_PlayerRadialProgressbar.progress = m_CircleTimerValue;
+                }
+
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    m_NextPanel.Initialize(m_Root);
+                    m_NextPanel.EnterSection();
+                    ExitSection();
+                }
             }
+        }
+
+        public override void EnterSection()
+        {
+            base.EnterSection();
+            
+            m_RootInitializer.ScrollTo(GetSectionContainer());
         }
 
         public override void Initialize(VisualElement root)
         {
             base.Initialize(root);
 
-            m_PlayerRadialProgressbar = m_Root.Q<RadialProgress>(className: PLAY_SCROLL_CLASS);
-            m_MouseScrollIcon = m_Root.Q<VisualElement>(classes: MOUSE_ICON);
+            m_PlayerRadialProgressbar = GetSectionContainer().Q<RadialProgress>(className: PLAY_SCROLL_CLASS);
+            m_MouseScrollIcon = GetSectionContainer().Q<VisualElement>(classes: MOUSE_ICON);
 
             LoadModules();
             Invoke(nameof(AnimateMouseScroll), 1);
