@@ -25,10 +25,16 @@ namespace _Project.UI.PredictionPanel
 
         private void Update()
         {
-            if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxis("Mouse ScrollWheel") > 0)
+            // check if Section is active
+            if (GetSectionActivationStatus())
             {
-                ExitSection();
-                m_NextPanel.EnterSection();
+                // wait for Scroll up or Up key pressed
+                if (Input.GetAxisRaw("Vertical") > 0 || Input.GetAxis("Mouse ScrollWheel") > 0)
+                {
+                    // load the next Section and exit the current section
+                    m_NextPanel.EnterSection();
+                    ExitSection();
+                }
             }
         }
 
@@ -36,6 +42,7 @@ namespace _Project.UI.PredictionPanel
         {
             base.Initialize(root);
 
+            // clear cached modules if the this Section is load before
             m_LoadedModules.Clear();
 
             LoadModules();
@@ -44,13 +51,19 @@ namespace _Project.UI.PredictionPanel
         public override void EnterSection()
         {
             base.EnterSection();
+            
+            // Change the main camera location (thanks by Cinemachine)
             m_CustomCamera.gameObject.SetActive(true);
+            
+            // Scroll the ScrollView in Root to show this section
             m_RootInitializer.ScrollTo(GetSectionContainer());
         }
 
         public override void ExitSection(bool autoUnloadModules = false)
         {
             base.ExitSection(true);
+            
+            // change main camera location to the original position
             m_CustomCamera.gameObject.SetActive(false);
         }
 
@@ -73,19 +86,20 @@ namespace _Project.UI.PredictionPanel
 
         private void InitializeWeatherData()
         {
+            // clear any previously added module in the Section
             var weatherRoot = GetSectionContainer().Q<VisualElement>(WEATHER_CONTAINER_KEY);
             for (int i = 0; i < weatherRoot.childCount; i++)
             {
                 weatherRoot.RemoveAt(0);
             }
             
+            // load data from WeatherData array to the WeatherModule
             foreach (var singleWeather in m_WeatherData)
             {
                 var module = AddModule<SingleWeatherModule>();
                 module.SetRoot(weatherRoot);
                 module.SetData(singleWeather);
                 module.LoadModule();
-                module.GetPreInsertContainer().AddToClassList("SingleWeather--Hide");
                 module.InsertVisualElement();
                 m_LoadedModules.Add(module);
             }

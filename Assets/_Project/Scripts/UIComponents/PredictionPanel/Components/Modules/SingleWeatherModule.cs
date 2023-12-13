@@ -8,24 +8,22 @@ namespace _Project.UI.PredictionPanel.Modules
 {
     public class SingleWeatherModule : BaseUIModule
     {
+        // path from the Resource folder
         private const string MODULE_PATH = "VisualTrees/SingleWeatherModule/SingleWeatherModule";
         
+        // Selectors cons for finding Elements in UXML
         private const string ICON_HOLDER = "WeatherIcon";
         private const string WEATHER_TEMP = "WeatherTemp";
         private const string CITY_NAME = "CityName";
         
         private SingleWeather m_SingleWeather;
-
-
-        public void SetWeatherData(SingleWeather singleWeather)
-        {
-            m_SingleWeather = singleWeather;
-        }
-
+        
         public void SetData(SingleWeather singleWeather)
         {
+            // assign Data Model to the module 
             m_SingleWeather = singleWeather;
         }
+        
         
         public override void LoadModule()
         {
