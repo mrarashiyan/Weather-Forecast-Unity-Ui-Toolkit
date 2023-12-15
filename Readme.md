@@ -1,10 +1,8 @@
 ﻿
-```
-[![Watch the video](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/0ae11903-6786-4020-bec6-d77c20d33c10)](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/ec0af517-2689-4628-be50-3f057bfaee3d)
-```
+[![Video of the Project](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/0ae11903-6786-4020-bec6-d77c20d33c10)](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/ec0af517-2689-4628-be50-3f057bfaee3d)
 
 # Welcome to Weather Ui Toolkit System!
-This is a Framework and Simple Ui made by Unity Ui Toolkit based on a [this UI Design].(https://www.behance.net/gallery/52326419/Weather-Forecast-Web).  
+This is a Framework and Simple Ui made by Unity Ui Toolkit based on a [This Ui Design](https://www.behance.net/gallery/52326419/Weather-Forecast-Web).  
 My target was to create a Reusable framework for Ui Toolkit and create a demo project for others to show how to use it.
 
 
