@@ -1,5 +1,10 @@
-﻿# Welcome to Weather Ui Toolkit System!
-This is a Framework and Simple Ui made by Unity Ui Toolkit based on a [this UI Design].(https://www.behance.net/gallery/52326419/Weather-Forecast-Web).
+﻿
+```
+[![Watch the video](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/0ae11903-6786-4020-bec6-d77c20d33c10)](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/ec0af517-2689-4628-be50-3f057bfaee3d)
+```
+
+# Welcome to Weather Ui Toolkit System!
+This is a Framework and Simple Ui made by Unity Ui Toolkit based on a [this UI Design].(https://www.behance.net/gallery/52326419/Weather-Forecast-Web).  
 My target was to create a Reusable framework for Ui Toolkit and create a demo project for others to show how to use it.
 
 
@@ -11,80 +16,93 @@ My target was to create a Reusable framework for Ui Toolkit and create a demo pr
 
 # Features
 ## Resuable Framework
-You can use the codes and also idea of project's problem solving for your future projects.
-
+You can use the codes and also idea of project's problem solving for your future projects.  
+![enter image description here](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/96251d71-8a58-4dd2-9edf-941ed1854463)
 ## Supports Template System
-You can use a template as the Root for all of the Sections and the system will use it automatically for any instantiated Section or Module.
-
+You can use a template as the Root for all of the Sections and the system will use it automatically for any instantiated Section or Module.  
+![enter image description here](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/cf39820c-ff48-453e-9f04-cfb2700be8b3)
 
 ## Modular Architecture
-Each window (Section) contains of different Modules which are all resuable in other Sections. These Modules are fully Encapsulated ane Responsible for their action without any dependency to other objects.
+Each window (Section) contains of different Modules which are all resuable in other Sections. These Modules are fully Encapsulated ane Responsible for their action without any dependency to other objects.  
 For example, in the above video, the Hierachy structure generated automatically and like below:
-```mermaid
-graph LR
-A(Root Template) --> B(Home Section) --Many--> C(News Module)
-B --> D(Country Pin)
-A --> E(Forecast) -- Many --> F(City Module)
-```
+```mermaid  
+graph LR  
+A(Root Template) --> B(Home Section) --Many--> C(News Module)  
+B --> D(Country Pin)  
+A --> E(Forecast) -- Many --> F(City Module)  
+```  
 
 ## Data Models
 Based on a MVC like archticecture, each Module has a data binding with a Data Model. In this source code we implemented different modules based on their specific Data Models.
-"Image of modules"g
 
-## Alive and Dynamic Pages
-All of the pages have diferent items with **Animations** and **Transitions**. Everything has been done very smooth and alive!
+<img alt="City Tempreture Forecast" src="https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/e9a832f7-162a-4960-b37c-391d26e07e7b" width="200"/>  
+<img alt="enter image description here" src="https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/1507691a-0f48-417b-83cd-bcf3850d22ca" width="300"/>  
+<img alt="enter image description here" src="https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/f7ddf83a-82a9-438a-94ae-fb1eb141df4d" width="200"/>  
+
+## Animated and Dynamic Pages
+All of the pages have diferent items with **Animations** and **Transitions**. Everything has been done very smooth and alive!  
+![enter image description here](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/ac0e38c9-dda5-4071-b3f7-eff97039f5db)
 
 ## Object Orientation
 Sections and Modules are all inherted from their Base classes. You don't need to implement any extra thing! Most of things are exist in **Base Classes** and you just need to Customize them based on you needs.
-"Image of inheritance architecture"
+```mermaid  
+graph LR  
+A(Base UI Section) --> B(Root Template)  
+A --> C(Home Section)  
+A --> D(Forecast Section)  
+  
+E(Base UI Module) --> F(News Module)  
+E --> G(Country Pin Module)  
+E --> H(City Forecast Module)  
+```  
 
 ## Using World-Space Objects in UI Layers
-There is a smooth combination of **World-Objects** with UI Elements in this source. For example some countries are pinned and highlighted in Ui layer which are rotating and moving based on the Earth Model.
+There is a smooth combination of **World-Objects** with UI Elements in this source. For example some countries are pinned and highlighted in Ui layer which are rotating and moving based on the Earth Model.  
 "earth globe trackers"
 
 ## Well Documented Codes
-I tried to make an Obvious and Clear Code in this source. But I put comment on every part of the code to make sure they are clear and understandable.
-"image of comments"
+I tried to make an Obvious and Clear Code in this source. But I put comment on every part of the code to make sure they are clear and understandable.  
+![enter image description here](https://github.com/mrarashiyan/Weather-Forecast-Unity-Ui-Toolkit/assets/29746586/af7f8ebb-6ccf-4e42-b1b4-f97768690d4d)
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
 
 ## Unique Id for each Dyanmically Generated Element
 
 Any element which is generated by script, has a unique ID which can be used for any future access in your codes.
 
+
 # How To Use
-Clone the source code and open it in any Unity version. (Mine is 2023.3.15)
+Clone the source code and open it in any Unity version. (Mine is 2023.3.15)  
 In order to open the **Sample Scene**, Open the following path: **Assets/_Project/Scenes/SampleScene.unity**
 
 ## Project Structure
 
 - All of my Project files are located under **Assets/_Project/** directory.
 - All of UI files are located under this directory: **Assets/_Project/Scripts/UIComponents**
-- Directory Architecure for any UI element is like below:
-  -- Root of each Section:  **Assets/_Project/Scripts/UIComponents/ [Section Name]**
-  -- Controller Scripts (For the Section itself): **[Section Name] / Components**
-  --- Module Scripts (Modules which used in that Section): **[Section Name] / Components / Modules**
-  --- Data Model Scripts (Which are used in Modules): **[Section Name] / Components / DataModels**
-  --- VisualTree of Modules (Modules which used in that Section): **[Section Name] / Components / Resources/VisualTrees**
-  -- Style (USS) files of Section and Modules: **[Section Name] / Styles**
+- Directory Architecure for any UI element is like below:  
+  -- Root of each Section:  **Assets/_Project/Scripts/UIComponents/ [Section Name]**  
+  -- Controller Scripts (For the Section itself): **[Section Name] / Components**  
+  --- Module Scripts (Modules which used in that Section): **[Section Name] / Components / Modules**  
+  --- Data Model Scripts (Which are used in Modules): **[Section Name] / Components / DataModels**  
+  --- VisualTree of Modules (Modules which used in that Section): **[Section Name] / Components / Resources/VisualTrees**  
+  -- Style (USS) files of Section and Modules: **[Section Name] / Styles**  
   -- VisualTree (UXML) files of Section: **[Section Name] / VisualTrees**
 
- ```mermaid
-graph LR
-A[Section Name] --> B(Components)
-B --> C(Modules)
-B --> D(DataModels)
-B --> E(Resources) --> F(VisualTrees) --> G(Module Name)
-A --> H(Prefabs)
-A --> I(Styles)
-A --> J(VisualTrees)
-```
+ ```mermaid  
+graph LR  
+A[Section Name] --> B(Components)  
+B --> C(Modules)  
+B --> D(DataModels)  
+B --> E(Resources) --> F(VisualTrees) --> G(Module Name)  
+A --> H(Prefabs)  
+A --> I(Styles)  
+A --> J(VisualTrees)  
+```  
 
 ## Create a New Section
-**Sections** are the Main panels which are Instantiated inside `Root Body` tag. They are designed for Landing pages and placeholder for merging Modules.
+**Sections** are the Main panels which are Instantiated inside `Root Body` tag. They are designed for Landing pages and placeholder for merging Modules.  
 To Create a new Section.you have to follow these steps:
 
-1.  Create a new VisualTree and a Style (Based on project structure)
+1. Create a new VisualTree and a Style (Based on project structure)
 2. Open this path:  ``Assets/_Project/Scripts/UIComponents/_RootPanel/VisualTrees/_RootPanel.uxml``
 3. Find this tag: ``Root -> Middle -> Body -> BodyScroll``
 4. Instantiate your create Section,  **Dynamically** or **Manually** under this tag
