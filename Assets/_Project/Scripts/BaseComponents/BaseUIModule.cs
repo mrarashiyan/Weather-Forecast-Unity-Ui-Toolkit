@@ -18,14 +18,14 @@ using UnityEngine.UIElements;
 /// </summary>
 public class BaseUIModule : MonoBehaviour
 {
-    private string m_ModulePath = "<FileName>";
-    
+    private string m_ModulePath = "";
+
     protected VisualElement m_Root;
     private VisualTreeAsset m_VisualAsset;
-    
+
     private VisualElement m_PreInsertContainer;
     private VisualElement m_InsertedContainer;
-    
+
     /// <summary>
     /// Every Module has an Specific ModuleId which is unique and can be retrived in future
     /// </summary>
@@ -59,7 +59,7 @@ public class BaseUIModule : MonoBehaviour
     /// </summary>
     public virtual void LoadModule()
     {
-        if(m_VisualAsset==null)
+        if (m_VisualAsset == null)
             LoadVisualAsset();
     }
 
@@ -68,7 +68,7 @@ public class BaseUIModule : MonoBehaviour
         DeleteVisualElement();
         Destroy(this);
     }
-    
+
     /// <summary>
     /// Insert module form PreInsertContainer to Root variable and assign a Unique id to it
     /// </summary>
@@ -80,7 +80,7 @@ public class BaseUIModule : MonoBehaviour
         {
             m_PreInsertContainer.styleSheets.Add(styleSheet);
         }
-        
+
         m_PreInsertContainer.AddToClassList(m_ModuleId);
         m_Root.Add(m_PreInsertContainer);
         m_InsertedContainer = m_Root.Q<VisualElement>(className: m_ModuleId);
@@ -109,6 +109,10 @@ public class BaseUIModule : MonoBehaviour
     /// </summary>
     private void LoadVisualAsset()
     {
+        if (m_ModulePath == String.Empty)
+            Debug.LogError(string.Format(
+                "[BaseUIModule:{0}] LoadModule: Module Path is empty. You have to call SetModulePath before LoadVisualAssets function.",gameObject.name));
+        
         m_VisualAsset = Resources.Load<VisualTreeAsset>(m_ModulePath);
         if (m_VisualAsset == null)
         {
@@ -119,12 +123,12 @@ public class BaseUIModule : MonoBehaviour
         // Load m_VisualAsset into PreInsertContainer and ignore the TempContainer module
         m_PreInsertContainer = m_VisualAsset.Instantiate().ElementAt(0);
     }
-    
+
     protected T GetElement<T>(string Path) where T : VisualElement
     {
         return m_Root.Q<T>(Path);
     }
-    
+
     /// <summary>
     /// Get the module UXML before adding to the Root
     /// </summary>
